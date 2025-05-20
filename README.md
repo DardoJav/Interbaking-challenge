@@ -43,15 +43,15 @@ The application provides a secure API for financial operations with:
 
 ### Company Endpoints
 1. Register a Company
-    * Endpoint: POST /api/companies
-    * Request:
+    * **Endpoint:** POST /api/companies
+    * **Request:**
     ```
     {
         "cuit": "30-12345678-9",
         "razonSocial": "Empresa Ejemplo SA"
     }
     ```
-    * Response:
+    * **Response:**
     ```
     {
         "_id": "65f1a9d8b4c9e87254e3fa41",
@@ -62,8 +62,8 @@ The application provides a secure API for financial operations with:
     ```
 
 2. Get Recent Companies
-    * Endpoint: GET /api/companies/last-month
-    * Response:
+    * **Endpoint:** GET /api/companies/last-month
+    * **Response:**
     ```
     [
         {
@@ -77,9 +77,9 @@ The application provides a secure API for financial operations with:
 
 ### Company Endpoints
 3. Get Recent Companies
-    * Endpoint: GET /api/transfers/companies-last-month
-    * Headers: Authorization: Bearer <JWT_TOKEN>
-    * Response:
+    * **Endpoint:** GET /api/transfers/companies-last-month
+    * **Headers:** Authorization: Bearer <JWT_TOKEN>
+    * **Response:**
     ```
     [
         {
@@ -93,27 +93,27 @@ The application provides a secure API for financial operations with:
 
 ## Data Validation
 ### Company Registration
-● CUIT: Must match format XX-XXXXXXXX-X
-● Business Name: Only allows letters, numbers and basic punctuation
-● Duplicate CUIT: Prevent duplicate registrations
+* **CUIT:** Must match format XX-XXXXXXXX-X
+* **Business Name:** Only allows letters, numbers and basic punctuation
+* **Duplicate CUIT:** Prevent duplicate registrations
 
 ### Transfer Records
-● Amount: Must be positive number
-● Accounts: Debit/Credit accounts must differ
-● Company Reference: Must reference valid company
+* **Amount:** Must be positive number
+* **Accounts:** Debit/Credit accounts must differ
+* **Company Reference:** Must reference valid company
 
 ## Performance Features
-● Indexed queries on frequently accessed fields:
-    ○ cuit (unique)
-    ○ fechaAdhesion
-    ○ Transfer dates
-● Database-side filtering for date ranges
-● Optimized aggregation pipelines
+* Indexed queries on frequently accessed fields:
+    * cuit (unique)
+    * fechaAdhesion
+    * Transfer dates
+* Database-side filtering for date ranges
+* Optimized aggregation pipelines
 
 ## How to Run
 ### Prerequisites
-● Docker and Docker Compose
-● Node.js (v18+ recommended)
+* Docker and Docker Compose
+* Node.js (v18+ recommended)
 
 ### Running with Docker
 ```
@@ -143,19 +143,19 @@ The postman collection for testing is at root folder called "Interbanking-challe
 - please import the collection in a tool for testing and developing REST APIs like postman, Insomnia, Thunder Client, etc
 
 ### Example Requests
-1. Register Company:
+1. **Register Company:**
 ```
 curl -X POST http://localhost:3000/api/companies \
   -H "Content-Type: application/json" \
   -d '{"cuit":"30-87654321-9", "razonSocial":"Mi Empresa"}'
 ```
 
-2. Get Recent Companies:
+2. **Get Recent Companies:**
 ```
 curl http://localhost:3000/api/companies/last-month
 ```
 
-3. Get Companies with Transfers:
+3. **Get Companies with Transfers:**
 ```
 curl http://localhost:3000/api/transfers/companies-last-month \
   -H "Authorization: Bearer <JWT_TOKEN>"
@@ -163,8 +163,8 @@ curl http://localhost:3000/api/transfers/companies-last-month \
 
 ## Database Access
 For development inspection, connect to MongoDB:
-● **URI:** mongodb://localhost:27017/companies-transfers
-● **Compass** Connection: Use the above URI in MongoDB Compass
+* **URI:** mongodb://localhost:27017/companies-transfers
+* **Compass** Connection: Use the above URI in MongoDB Compass
 
 ## Project Structure
 ```
