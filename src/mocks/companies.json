@@ -1,0 +1,26 @@
+[
+    {
+        "_id": "64f1a9d8b4c9e87254e3fa41",
+        "cuit": "30-12345678-9",
+        "razonSocial": "Tech Solutions SA",
+        "fechaAdhesion": "2025-05-19T10:00:00Z"
+    },
+    {
+        "_id": "64f1a9d8b4c9e87254e3fa42",
+        "cuit": "33-98765432-1",
+        "razonSocial": "Consultora Financiera XYZ",
+        "fechaAdhesion": "2024-05-01T14:30:00Z"
+    },
+    {
+        "_id": "64f1a9d8b4c9e87254e3fa43",
+        "cuit": "23-45678901-4",
+        "razonSocial": "Logística Avanzada",
+        "fechaAdhesion": "2024-05-10T09:15:00Z"
+    },
+    {
+        "_id": "64f1a9d8b4c9e87254e3fa44",
+        "cuit": "27-11112222-7",
+        "razonSocial": "Distribuidora Norte",
+        "fechaAdhesion": "2024-05-18T11:20:00Z"
+    }
+]
